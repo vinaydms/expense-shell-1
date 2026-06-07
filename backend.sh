@@ -56,6 +56,7 @@ mysql -h db.devopsvinay.online -uroot -p${mysql_root_password} < /app/schema/bac
 
 
 
+
 systemctl restart backend &>>$LOGFILE
 
 
