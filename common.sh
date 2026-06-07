@@ -1,13 +1,13 @@
 #!/bin/bash
 
-set -e
+# set -e
 
-failure(){
+# failure(){
 
-    echo "error occured at line number: $1, error command: $2"
-}
+#     echo "error occured at line number: $1, error command: $2"
+# }
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
+# trap 'failure ${LINENO} "$BASH_COMMAND"' ERR
 
 
 USERID=$(id -u)
@@ -29,16 +29,24 @@ VALIDATE(){
     fi
 }
 
-check_root(){
+# check_root(){
 
-    if [ $USERID -ne 0 ]
+#     if [ $USERID -ne 0 ]
+#     then
+#         echo "Please run this script with root access."
+#         exit 1
+#     else
+#         echo "you are super user."
+#     fi
+
+
+# }
+
+ if [ $USERID -ne 0 ]
     then
         echo "Please run this script with root access."
         exit 1
     else
         echo "you are super user."
     fi
-
-
-}
 
